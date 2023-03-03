@@ -1,5 +1,5 @@
-token = "5330473593:AAGhxPMVuvw9MM5HFOATF64Dx9RMOlwLhEw"
-chatID = '-1001861056305'
+token = "5254761773:AAGSD9hM9VWpzs8AUCTCTlMkN-kIAOub-8o"
+chatID = '-993688624'
 
 
 #reddit api authentication

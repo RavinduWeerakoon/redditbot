@@ -7,6 +7,6 @@ reddit_client_id = "NkhIFh4lW6MIDy5qJFAiWQ"
 reddit_client_secret = "pdKojtOFATkqracJYYCd8sAwysbNEg"
 
 
-number_of_posts = 5
+number_of_posts = 40
 #checking frequency in hours
 checking_frequency = 1

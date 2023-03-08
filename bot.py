@@ -17,7 +17,7 @@ async def hot(context: ContextTypes.DEFAULT_TYPE):
     
     to_update = []
     scraper = RedditScraper()
-    hot = scraper.get_hot(num=number_of_posts)
+    hot = scraper.get_hot(num=number_of_posts, subreddit='bing')
     last_urls = prev_posts.get_last_urls(number_of_posts+10)
 
     

@@ -1,5 +1,5 @@
 token = "5254761773:AAGSD9hM9VWpzs8AUCTCTlMkN-kIAOub-8o"
-chatID = '-1822256072'
+chatID = '@openai1001'
 
 
 #reddit api authentication

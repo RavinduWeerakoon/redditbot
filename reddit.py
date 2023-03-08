@@ -35,11 +35,8 @@ def parse_img_from_text(text):
     images = [telegram.InputMediaPhoto(url) for url in images]
     return text, images
 
-# def get_gallery_imgs(id):
-#     r = requests.get(f"https://www.reddit.com/comments/{id}.json")
-#     data = r.json()
-#     print(type(data))
 
+# convert the markdown to html
 def markdown_to_html(text):
 
     #removing unnecassry tags
@@ -59,7 +56,7 @@ def markdown_to_html(text):
     text = text.replace("*", '•')
     # #extra white spaces
     # text = text.replace("\n\n", '\n')
-    return text
+    return text 
 
 
 

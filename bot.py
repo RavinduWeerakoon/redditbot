@@ -21,7 +21,7 @@ async def hot(context: ContextTypes.DEFAULT_TYPE):
     last_urls = prev_posts.get_last_urls(number_of_posts+10)
 
     
-    # time_delay = 1 * 3600 /40
+    time_delay = 1 * 3600 /40
     
     for post in hot:
         
@@ -45,11 +45,14 @@ async def hot(context: ContextTypes.DEFAULT_TYPE):
 
 
             elif  '.jpg' in post.url or '.png' in post.url or '.gif' in post.url:
+                try:
                 
-                await context.bot.sendPhoto(chatID, photo=post.url, caption=f"<b>{title}</b>", parse_mode=telegram.constants.ParseMode.HTML)
+                    await context.bot.sendPhoto(chatID, photo=post.url, caption=f"<b>{title}</b>", parse_mode=telegram.constants.ParseMode.HTML)
+                except:
+                    pass
             elif 'reddit.com/gallery' in post.url:
                 continue
-            # time.sleep(time_delay)
+            time.sleep(time_delay)
     
     prev_posts.insert_urls(to_update)        
 
@@ -89,6 +92,5 @@ job_queue = application.job_queue
     
 hot_handler = CommandHandler('hot', hot_command)
 application.add_handler(hot_handler)
-#job_minute = job_queue.run_repeating(hot, interval=checking_frequency*3600, first=5)
-job_minute = job_queue.run_repeating(hot, interval=60, first=5)
+job_minute = job_queue.run_repeating(hot, interval=checking_frequency*3600, first=5)
 application.run_polling()
